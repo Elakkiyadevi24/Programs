@@ -1,0 +1,29 @@
+ import java.io.*;
+ class PrimeExample{    
+ public static void main(String args[]) throws Exception
+ {    
+  int a,i,flag=0 ;      
+  DataInputStream d=new DataInputStream(System.in);
+  System.out.println("Enter the number");
+  int n=Integer.parseInt(d.readLine());
+  a=n/2; 
+  if(n==0 || n==1 )
+    System.out.println("Its not prime number");
+  else
+  {
+    for(i=2;i<=a;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+  }
+  if(flag==0)
+    System.out.println("Its a prime number");
+  else
+    System.out.print("Its not a prime number");
+ }
+  
+}    
